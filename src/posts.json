@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "title": "A world-class fitness center opens in Ukraine",
+    "text": "Today in Kyiv, a grand opening was held for a new fitness center that promises to become the largest in Eastern Europe. The facility features state-of-the-art equipment, zones for functional training, an Olympic-size swimming pool, and dedicated rooms for yoga and Pilates. Organizers emphasize the creation of comfortable conditions for people with disabilities.\n\nAccording to the owners, the club can accommodate over 3,000 visitors simultaneously. Future plans include hosting international competitions and masterclasses by top trainers from around the world.",
+    "image": "https://picsum.photos/seed/news1/800/500"
+  },
+  {
+    "id": 2,
+    "title": "Scientists confirm the benefits of short workouts",
+    "text": "A new study published in the journal Health & Fitness shows that even 15-minute high-intensity workouts have a significant impact on health. Participants who trained just three times a week showed improved cardiovascular function and reduced stress levels after only one month.\n\nResearchers highlight that this format may be ideal for busy individuals, allowing them to maintain health without spending long hours at the gym.",
+    "image": "https://picsum.photos/seed/news2/800/500"
+  },
+  {
+    "id": 3,
+    "title": "Interest in strength sports is growing in Europe",
+    "text": "According to the European Sports Federation, the number of people regularly attending gyms has increased by 40% over the past five years. Powerlifting, CrossFit, and bodybuilding have seen a notable rise in popularity. Experts attribute this to a broader trend toward healthy living and personal development.\n\nMany fitness clubs are now adapting their programs to meet new demands, offering specialized courses for both beginners and advanced athletes.",
+    "image": "https://picsum.photos/seed/news3/800/500"
+  },
+  {
+    "id": 4,
+    "title": "Apple unveils new health app",
+    "text": "Apple has announced the launch of a new app that combines activity tracking, nutrition, and sleep monitoring. Unlike existing solutions, the app uses artificial intelligence to generate personalized recommendations based on the user’s lifestyle and goals.\n\nThe release is expected this fall, with early access granted to owners of the latest-generation Apple Watch.",
+    "image": "https://picsum.photos/seed/news4/800/500"
+  },
+  {
+    "id": 5,
+    "title": "Berlin Marathon sets participation record",
+    "text": "This year’s Berlin Marathon broke records with over 55,000 runners from 130 countries taking part. Organizers note that interest in mass races continues to grow despite economic challenges and global tensions.\n\nParticipants included both professional athletes and amateurs. The men’s winner, a runner from Kenya, set a new personal best.",
+    "image": "https://picsum.photos/seed/news5/800/500"
+  },
+  {
+    "id": 6,
+    "title": "Doctor highlights importance of sleep for athletes",
+    "text": "A renowned sports physician emphasized that quality sleep is one of the key factors for successful training. Lack of sleep not only reduces training effectiveness but also increases the risk of injury and fatigue.\n\nHe recommends that professional athletes get at least 8 hours of sleep per night and use relaxation techniques to restore the nervous system.",
+    "image": "https://picsum.photos/seed/news6/800/500"
+  },
+  {
+    "id": 7,
+    "title": "Unique sports park opens in Tokyo",
+    "text": "Tokyo has unveiled the world’s first sports park where visitors can engage in nearly every type of sport in one location. The park includes fields for football, basketball, tennis, climbing zones, a cycling track, and running paths.\n\nThe project was supported by city authorities and private investors. Organizers hope the park will become a hub for athletes and tourists alike.",
+    "image": "https://picsum.photos/seed/news7/800/500"
+  },
+  {
+    "id": 8,
+    "title": "Fitness trends for 2025: What’s coming",
+    "text": "Experts predict that in 2025, online workouts with virtual reality elements, personalized programs based on DNA tests, and outdoor training with minimal equipment will become especially popular.\n\nThere’s also expected growth in mindfulness practices such as meditation and breathing exercises, which will be actively integrated into fitness programs.",
+    "image": "https://picsum.photos/seed/news8/800/500"
+  },
+  {
+    "id": 9,
+    "title": "Schools to introduce mandatory fitness classes",
+    "text": "The Ministry of Education has announced a new physical education standard. Under the program, students will attend fitness classes three times a week.\n\nThe initiative aims to reduce childhood obesity and improve the overall health of the younger generation. A pilot rollout is planned for the next academic year in several regions.",
+    "image": "https://picsum.photos/seed/news9/800/500"
+  }
+]
