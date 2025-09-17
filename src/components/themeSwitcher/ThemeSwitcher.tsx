@@ -10,9 +10,7 @@ const ThemeSwitcher = () => {
       aria-label="Basic button group"
       className="flex justify-self-end"
     >
-      <Button onClick={themeStore.toggle}>
-        {themeStore.darkMode ? "Dark" : "Light"}
-      </Button>
+      <Button onClick={themeStore.toggle}>{themeStore.darkMode ? "Dark" : "Light"}</Button>
     </ButtonGroup>
   );
 };

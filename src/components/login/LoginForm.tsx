@@ -47,10 +47,7 @@ const LoginForm = () => {
       sx={{ backgroundColor: theme.palette.background.default }}
       formTitle="Sign In"
       additionalLink={() => (
-        <AppLink
-          to={"/registration"}
-          sx={{ color: theme.palette.text.primary }}
-        >
+        <AppLink to={"/registration"} sx={{ color: theme.palette.text.primary }}>
           Registration
         </AppLink>
       )}

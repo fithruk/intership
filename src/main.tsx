@@ -15,5 +15,5 @@ createRoot(document.getElementById("root")!).render(
         <App />
       </StyledEngineProvider>
     </ThemeProvider>
-  </StrictMode>
+  </StrictMode>,
 );

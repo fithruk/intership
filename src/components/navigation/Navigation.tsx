@@ -12,11 +12,7 @@ const AppNavigation = ({ sx }: AppNavProps) => {
   const theme = useTheme();
 
   return (
-    <Box
-      component={"nav"}
-      className="flex justify-between basis-xs"
-      sx={{ ...sx }}
-    >
+    <Box component={"nav"} className="flex justify-between basis-xs" sx={{ ...sx }}>
       {
         <Grid
           container

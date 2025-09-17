@@ -10,11 +10,7 @@ interface ThemeProviderProps {
 const ThemeProvider = ({ children }: ThemeProviderProps) => {
   const themeStore = useThemeStore();
 
-  return (
-    <MUIProvider theme={themeStore.darkMode ? darkTheme : lightTheme}>
-      {children}
-    </MUIProvider>
-  );
+  return <MUIProvider theme={themeStore.darkMode ? darkTheme : lightTheme}>{children}</MUIProvider>;
 };
 
 export default ThemeProvider;

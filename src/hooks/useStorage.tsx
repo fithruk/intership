@@ -10,10 +10,7 @@ const useLocalStorage = <T,>(): IUseLocalStorage<T> => {
     try {
       localStorage.setItem(key, JSON.stringify(values));
     } catch (error) {
-      console.error(
-        `Ошибка при сохранении в localStorage (ключ: ${key}):`,
-        error
-      );
+      console.error(`Ошибка при сохранении в localStorage (ключ: ${key}):`, error);
     }
   };
 
@@ -22,10 +19,7 @@ const useLocalStorage = <T,>(): IUseLocalStorage<T> => {
       const data = localStorage.getItem(key);
       return data ? (JSON.parse(data) as T) : null;
     } catch (error) {
-      console.error(
-        `Ошибка при загрузке из localStorage (ключ: ${key}):`,
-        error
-      );
+      console.error(`Ошибка при загрузке из localStorage (ключ: ${key}):`, error);
       return null;
     }
   };

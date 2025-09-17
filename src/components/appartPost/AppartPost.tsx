@@ -1,10 +1,4 @@
-import {
-  Box,
-  CircularProgress,
-  Paper,
-  Typography,
-  useTheme,
-} from "@mui/material";
+import { Box, CircularProgress, Paper, Typography, useTheme } from "@mui/material";
 import allPosts from "../../posts.json";
 import { useParams } from "react-router-dom";
 import { lazy, Suspense } from "react";

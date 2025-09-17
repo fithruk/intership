@@ -10,10 +10,8 @@ interface AppInputProps {
   helperText?: string;
 }
 
-const Appinput = forwardRef<HTMLInputElement, AppInputProps>(
-  ({ sx, ...rest }, ref) => {
-    return <TextField fullWidth sx={{ ...sx }} {...rest} inputRef={ref} />;
-  }
-);
+const Appinput = forwardRef<HTMLInputElement, AppInputProps>(({ sx, ...rest }, ref) => {
+  return <TextField fullWidth sx={{ ...sx }} {...rest} inputRef={ref} />;
+});
 
 export default Appinput;

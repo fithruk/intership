@@ -23,7 +23,7 @@ const AppLink = forwardRef<HTMLAnchorElement, AppLinkProps>(
         </Typography>
       </MuiLink>
     );
-  }
+  },
 );
 
 export default AppLink;

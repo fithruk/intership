@@ -17,12 +17,7 @@ const AppLayout = ({ children }: AppProps) => {
         sx={{ backgroundColor: theme.palette.background.default }}
         className="flex flex-col min-h-screen justify-center pt-4 pb-4 pr-20 pl-20"
       >
-        <Grid
-          container
-          display={"flex"}
-          justifyContent={"space-between"}
-          alignItems={"center"}
-        >
+        <Grid container display={"flex"} justifyContent={"space-between"} alignItems={"center"}>
           {" "}
           <Grid size={3} className="flex items-center">
             <Typography
@@ -36,9 +31,7 @@ const AppLayout = ({ children }: AppProps) => {
             </Typography>
           </Grid>
           <Grid size={3}>
-            <AppNavigation
-              sx={{ backgroundColor: theme.palette.background.default }}
-            />
+            <AppNavigation sx={{ backgroundColor: theme.palette.background.default }} />
           </Grid>
           <Grid size={3}>
             <ThemeSwitcher />

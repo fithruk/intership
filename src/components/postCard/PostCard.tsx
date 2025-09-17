@@ -40,11 +40,7 @@ const PostCard = ({ id, image, text, title, sx }: PostCardProps) => {
         }
       >
         {" "}
-        <LazyCardMedia
-          title={title}
-          image={image}
-          className="h-48 w-full object-cover"
-        />
+        <LazyCardMedia title={title} image={image} className="h-48 w-full object-cover" />
       </Suspense>
       <CardContent className="flex flex-col gap-2 p-4">
         <Typography

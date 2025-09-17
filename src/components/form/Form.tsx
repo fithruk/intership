@@ -9,13 +9,7 @@ interface FromProps {
   additionalLink?: () => ReactNode;
 }
 
-const Form = ({
-  formTitle,
-  children,
-  onSubmit,
-  sx,
-  additionalLink,
-}: FromProps) => {
+const Form = ({ formTitle, children, onSubmit, sx, additionalLink }: FromProps) => {
   return (
     <Paper
       sx={{ ...sx }}
