@@ -1,5 +1,5 @@
-import { forwardRef, type ComponentProps } from "react";
-import { Link as MuiLink, Typography, type SxProps } from "@mui/material";
+import { Link as MuiLink, type SxProps, Typography } from "@mui/material";
+import { type ComponentProps, forwardRef } from "react";
 import { Link } from "react-router-dom";
 
 interface AppLinkProps extends ComponentProps<typeof Link> {

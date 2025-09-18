@@ -5,8 +5,8 @@ import {
   CardActions,
   CardContent,
   CircularProgress,
-  Typography,
   type SxProps,
+  Typography,
 } from "@mui/material";
 import { lazy, Suspense } from "react";
 

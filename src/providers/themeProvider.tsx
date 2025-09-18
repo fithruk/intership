@@ -1,7 +1,7 @@
 import { ThemeProvider as MUIProvider } from "@mui/material";
-import { lightTheme, darkTheme } from "../themes/theme";
-import { type ReactNode } from "react";
+import type { ReactNode } from "react";
 import { useThemeStore } from "../store/useThemeStore";
+import { darkTheme, lightTheme } from "../themes/theme";
 
 interface ThemeProviderProps {
   children: ReactNode;

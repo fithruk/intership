@@ -1,4 +1,4 @@
-import { TextField, type SxProps } from "@mui/material";
+import { type SxProps, TextField } from "@mui/material";
 import { forwardRef } from "react";
 
 interface AppInputProps {

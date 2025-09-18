@@ -1,11 +1,11 @@
 import "./App.css";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { useAuthStore } from "./store/useAuthStore";
 import type { ReactNode } from "react";
-import RegistrationPage from "./components/pages/registration/RegistrationPage";
-import LoginPage from "./components/pages/loginPage/LoginPage";
-import BlogPage from "./components/pages/blogPage/BlogPage";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import BlogApartPage from "./components/pages/blogApartPage/BlogApartPage";
+import BlogPage from "./components/pages/blogPage/BlogPage";
+import LoginPage from "./components/pages/loginPage/LoginPage";
+import RegistrationPage from "./components/pages/registration/RegistrationPage";
+import { useAuthStore } from "./store/useAuthStore";
 
 interface ProtectedRouteProps {
   children: ReactNode;

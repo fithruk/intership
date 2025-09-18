@@ -1,9 +1,9 @@
 import { Grid, Paper, Typography } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import type { ReactNode } from "react";
-import AppContainer from "../ui/appContainer/AppContainer";
 import AppNavigation from "../navigation/Navigation";
 import ThemeSwitcher from "../themeSwitcher/ThemeSwitcher";
+import AppContainer from "../ui/appContainer/AppContainer";
 
 interface AppProps {
   children: ReactNode;

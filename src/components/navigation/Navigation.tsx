@@ -1,6 +1,6 @@
 import { Box, Grid } from "@mui/material";
+import { type SxProps, useTheme } from "@mui/material/styles";
 import AppLink from "../ui/appLink/AppLink";
-import { useTheme, type SxProps } from "@mui/material/styles";
 
 const navItems = ["Login", "Blog"];
 

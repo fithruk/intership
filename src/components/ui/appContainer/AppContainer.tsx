@@ -1,4 +1,4 @@
-import { Grid, Paper, type SxProps } from "@mui/material";
+import { Grid, type SxProps } from "@mui/material";
 import type { ReactNode } from "react";
 
 interface AppConteonerProps {

@@ -1,12 +1,11 @@
-import Form from "../form/Form";
-import { z } from "zod";
-import Appinput from "../ui/appInput/AppInput";
-
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
 import { Button, useTheme } from "@mui/material";
-import { useUserState } from "../../store/useUserStore";
+import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+import { z } from "zod";
+import { useUserState } from "../../store/useUserStore";
+import Form from "../form/Form";
+import Appinput from "../ui/appInput/AppInput";
 
 export const RegisterSchema = z.object({
   email: z.string().email("Please enter a valid email"),

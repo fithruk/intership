@@ -1,6 +1,6 @@
 import { Grid, Typography, useTheme } from "@mui/material";
-import { useAuthStore } from "../../store/useAuthStore";
 import allPosts from "../../posts.json";
+import { useAuthStore } from "../../store/useAuthStore";
 import PostCard from "../postCard/PostCard";
 
 const Posts = () => {
