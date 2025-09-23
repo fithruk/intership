@@ -4,10 +4,10 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { z } from "zod";
 import { useAuthStore } from "../../store/useAuthStore";
-import { useUserState } from "../../store/useUserStore";
 import Form from "../form/Form";
-import Appinput from "../ui/appInput/AppInput";
+import Appinput, { type InputTypes } from "../ui/appInput/AppInput";
 import AppLink from "../ui/appLink/AppLink";
+import { useLoginPost } from "../../hooks/useReactQuery";
 
 export const loginSchema = z.object({
   email: z.string().email("Please enter a valid email"),
@@ -16,12 +16,20 @@ export const loginSchema = z.object({
 
 export type LoginFormValues = z.infer<typeof loginSchema>;
 
+const inputs: {
+  label: string;
+  type: InputTypes;
+  name: string;
+}[] = [
+  { label: "Email", type: "email", name: "email" },
+  { label: "Password", type: "password", name: "password" },
+];
+
 const LoginForm = () => {
   const theme = useTheme();
   const authState = useAuthStore();
-  const userStore = useUserState();
   const navigate = useNavigate();
-
+  const { mutate } = useLoginPost();
   const {
     register,
     handleSubmit,
@@ -30,15 +38,16 @@ const LoginForm = () => {
     resolver: zodResolver(loginSchema),
   });
 
-  const onSubmit = (data: LoginFormValues) => {
-    const user = userStore.findUser({
-      email: data.email,
-      password: data.password,
+  const onSubmit = (loginData: LoginFormValues) => {
+    mutate(loginData, {
+      onError: (error) => {
+        alert(error.message);
+      },
+      onSuccess: (data) => {
+        authState.signUp(data.name);
+        navigate("/blog", { replace: true });
+      },
     });
-    if (user) {
-      authState.signUp(user.name);
-      navigate("/blog", { replace: true });
-    }
   };
 
   return (
@@ -46,27 +55,23 @@ const LoginForm = () => {
       sx={{ backgroundColor: theme.palette.background.default }}
       formTitle="Sign In"
       additionalLink={() => (
-        <AppLink to={"/registration"} sx={{ color: theme.palette.text.primary }}>
+        <AppLink
+          to={"/registration"}
+          sx={{ color: theme.palette.text.primary }}
+        >
           Registration
         </AppLink>
       )}
       onSubmit={handleSubmit(onSubmit)}
     >
-      {" "}
-      <Appinput
-        label="Email"
-        type="email"
-        {...register("email")}
-        error={!!errors.email}
-        helperText={errors.email?.message}
-      />
-      <Appinput
-        label="Пароль"
-        type="password"
-        {...register("password")}
-        error={!!errors.password}
-        helperText={errors.password?.message}
-      />
+      {inputs.map((input) => (
+        <Appinput
+          {...input}
+          register={register(input.name as keyof LoginFormValues)}
+          error={!!errors[input.name as keyof LoginFormValues]}
+          helperText={errors[input.name as keyof LoginFormValues]?.message}
+        />
+      ))}
       <Button type="submit" variant="contained" color="primary" fullWidth>
         Enter
       </Button>

@@ -3,9 +3,9 @@ import { Button, useTheme } from "@mui/material";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { z } from "zod";
-import { useUserState } from "../../store/useUserStore";
 import Form from "../form/Form";
-import Appinput from "../ui/appInput/AppInput";
+import Appinput, { type InputTypes } from "../ui/appInput/AppInput";
+import { useRegistrationPost } from "../../hooks/useReactQuery";
 
 export const RegisterSchema = z.object({
   email: z.string().email("Please enter a valid email"),
@@ -14,32 +14,45 @@ export const RegisterSchema = z.object({
     .string()
     .refine(
       (name) => name.split(" ").filter(Boolean).length > 1,
-      "Name must consist of at least two words.",
+      "Name must consist of at least two words."
     ),
 });
 
-export type REgisterFormValues = z.infer<typeof RegisterSchema>;
+export type RegisterFormValues = z.infer<typeof RegisterSchema>;
+
+const inputs: {
+  label: string;
+  type: InputTypes;
+  name: string;
+}[] = [
+  { label: "Email", type: "email", name: "email" },
+  { label: "Password", type: "password", name: "password" },
+  { label: "Name", type: "text", name: "name" },
+];
 
 const RegistrationForm = () => {
-  const userStore = useUserState();
   const navigate = useNavigate();
   const theme = useTheme();
+
+  const { mutate } = useRegistrationPost();
 
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<REgisterFormValues>({
+  } = useForm<RegisterFormValues>({
     resolver: zodResolver(RegisterSchema),
   });
 
-  const onSubmit = (data: REgisterFormValues) => {
-    userStore.createUser({
-      name: data.name,
-      email: data.email,
-      password: data.password,
+  const onSubmit = (submitData: RegisterFormValues) => {
+    mutate(submitData, {
+      onSuccess: () => {
+        navigate("/login", { replace: true });
+      },
+      onError: (error) => {
+        alert(error.message);
+      },
     });
-    navigate("/login", { replace: true });
   };
 
   return (
@@ -48,29 +61,14 @@ const RegistrationForm = () => {
       sx={{ backgroundColor: theme.palette.background.default }}
       formTitle="Registration"
     >
-      <Appinput
-        label="Email"
-        type="email"
-        {...register("email")}
-        error={!!errors.email}
-        helperText={errors.email?.message}
-      />
-
-      <Appinput
-        label="Password"
-        type="password"
-        {...register("password")}
-        error={!!errors.password}
-        helperText={errors.password?.message}
-      />
-
-      <Appinput
-        label="Name"
-        type="text"
-        {...register("name")}
-        error={!!errors.name}
-        helperText={errors.name?.message}
-      />
+      {inputs.map((input) => (
+        <Appinput
+          {...input}
+          register={register(input.name as keyof RegisterFormValues)}
+          error={!!errors[input.name as keyof RegisterFormValues]}
+          helperText={errors[input.name as keyof RegisterFormValues]?.message}
+        />
+      ))}
       <Button type="submit" variant="contained" color="primary" fullWidth>
         Enter
       </Button>
