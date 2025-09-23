@@ -55,7 +55,14 @@ const LoginForm = () => {
       sx={{ backgroundColor: theme.palette.background.default }}
       formTitle="Sign In"
       additionalLink={() => (
+<<<<<<< HEAD
         <AppLink to={"/registration"} sx={{ color: theme.palette.text.primary }}>
+=======
+        <AppLink
+          to={"/registration"}
+          sx={{ color: theme.palette.text.primary }}
+        >
+>>>>>>> e8c39de7ae0721d1512598278a8259f69db83b85
           Registration
         </AppLink>
       )}

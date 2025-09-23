@@ -14,7 +14,11 @@ export const RegisterSchema = z.object({
     .string()
     .refine(
       (name) => name.split(" ").filter(Boolean).length > 1,
+<<<<<<< HEAD
       "Name must consist of at least two words.",
+=======
+      "Name must consist of at least two words."
+>>>>>>> e8c39de7ae0721d1512598278a8259f69db83b85
     ),
 });
 

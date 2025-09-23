@@ -14,7 +14,13 @@ const ReactQueryProvider = ({ children }: ReactQueryProviderProps) => {
     },
   });
 
+<<<<<<< HEAD
   return <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>;
+=======
+  return (
+    <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
+  );
+>>>>>>> e8c39de7ae0721d1512598278a8259f69db83b85
 };
 
 export default ReactQueryProvider;

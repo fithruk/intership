@@ -12,7 +12,10 @@ import allPosts from "../../posts.json";
 import { useAuthStore } from "../../store/useAuthStore";
 import PostCard from "../postCard/PostCard";
 import { type FormEvent } from "react";
-import { useFeedURLPost, useLoadArticlesPreview } from "../../hooks/useReactQuery";
+import {
+  useFeedURLPost,
+  useLoadArticlesPreview,
+} from "../../hooks/useReactQuery";
 import Appinput from "../ui/appInput/AppInput";
 import { useForm, Controller } from "react-hook-form";
 
@@ -40,7 +43,7 @@ const Posts = () => {
       {
         onError: (error: any) => alert(error.message),
         onSuccess: () => alert("Success"),
-      },
+      }
     );
   });
 

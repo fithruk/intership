@@ -70,7 +70,12 @@ function App() {
 
         <Route
           path="*"
-          element={<Navigate to={useAuthStore.getState().isAuth ? "/blog" : "/login"} replace />}
+          element={
+            <Navigate
+              to={useAuthStore.getState().isAuth ? "/blog" : "/login"}
+              replace
+            />
+          }
         />
       </Routes>
     </BrowserRouter>

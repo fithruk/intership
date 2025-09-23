@@ -9,9 +9,26 @@ import axios, {
 
 interface ApiServiceTypes {
   get<T>(url: string, config?: AxiosRequestConfig): Promise<AxiosResponse<T>>;
+<<<<<<< HEAD
   post<T>(url: string, data?: unknown, config?: AxiosRequestConfig): Promise<AxiosResponse<T>>;
   put<T>(url: string, data?: unknown, config?: AxiosRequestConfig): Promise<AxiosResponse<T>>;
   delete<T>(url: string, config?: AxiosRequestConfig): Promise<AxiosResponse<T>>;
+=======
+  post<T>(
+    url: string,
+    data?: unknown,
+    config?: AxiosRequestConfig
+  ): Promise<AxiosResponse<T>>;
+  put<T>(
+    url: string,
+    data?: unknown,
+    config?: AxiosRequestConfig
+  ): Promise<AxiosResponse<T>>;
+  delete<T>(
+    url: string,
+    config?: AxiosRequestConfig
+  ): Promise<AxiosResponse<T>>;
+>>>>>>> e8c39de7ae0721d1512598278a8259f69db83b85
 }
 
 class ApiService implements ApiServiceTypes {
@@ -35,18 +52,33 @@ class ApiService implements ApiServiceTypes {
         }
         console.error("Response Error:", error);
         return Promise.reject(error);
+<<<<<<< HEAD
       },
     );
   }
 
   async get<T>(url: string, config?: AxiosRequestConfig): Promise<AxiosResponse<T>> {
+=======
+      }
+    );
+  }
+
+  async get<T>(
+    url: string,
+    config?: AxiosRequestConfig
+  ): Promise<AxiosResponse<T>> {
+>>>>>>> e8c39de7ae0721d1512598278a8259f69db83b85
     return this.axiosInstance.get<T>(url, config);
   }
 
   async post<T>(
     url: string,
     data?: unknown,
+<<<<<<< HEAD
     config?: AxiosRequestConfig,
+=======
+    config?: AxiosRequestConfig
+>>>>>>> e8c39de7ae0721d1512598278a8259f69db83b85
   ): Promise<AxiosResponse<T>> {
     return this.axiosInstance.post<T>(url, data, config);
   }
@@ -54,12 +86,23 @@ class ApiService implements ApiServiceTypes {
   async put<T>(
     url: string,
     data?: unknown,
+<<<<<<< HEAD
     config?: AxiosRequestConfig,
+=======
+    config?: AxiosRequestConfig
+>>>>>>> e8c39de7ae0721d1512598278a8259f69db83b85
   ): Promise<AxiosResponse<T>> {
     return this.axiosInstance.put<T>(url, data, config);
   }
 
+<<<<<<< HEAD
   async delete<T>(url: string, config?: AxiosRequestConfig): Promise<AxiosResponse<T>> {
+=======
+  async delete<T>(
+    url: string,
+    config?: AxiosRequestConfig
+  ): Promise<AxiosResponse<T>> {
+>>>>>>> e8c39de7ae0721d1512598278a8259f69db83b85
     return this.axiosInstance.delete<T>(url, config);
   }
 }

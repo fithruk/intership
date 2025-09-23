@@ -18,5 +18,9 @@ createRoot(document.getElementById("root")!).render(
         </StyledEngineProvider>
       </ThemeProvider>
     </ReactQueryProvider>
+<<<<<<< HEAD
   </StrictMode>,
+=======
+  </StrictMode>
+>>>>>>> e8c39de7ae0721d1512598278a8259f69db83b85
 );
